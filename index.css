@@ -1,0 +1,232 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+body{
+  height: 100vh;
+  position: relative;
+}
+body::after{
+  content: "";
+  position: absolute;
+  background-color: hsl(264, 100%, 61%);
+  z-index: -1;
+  width:510px;
+  height: 600px;
+  top: 0;
+  left: -9%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+main{
+  display: flex;
+  flex-flow: wrap row;
+  height: fit-content;
+  width: 60%;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  top: 50% ;
+  left: 50%;
+  transform:translate(-43% ,-50%);
+}
+.main{
+  display: flex;
+  flex-flow: column wrap;
+  width: 55%;
+  height:50%;
+  justify-content: space-evenly;
+  color: rgb(57 36 74);
+}
+.main p{
+  margin-top: 20px;
+  line-height: 25px;
+  font-weight: 400;
+  font-size: smaller;
+  opacity: .6;
+}
+.app{
+  width: 240px;
+  height: 510px;
+  background-color: rgb(245 243 248);
+  border: 10px solid white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 1px .2px , 25px 25px 15px 0 rgb(240, 238, 243);
+  display: flex;
+  flex-flow: column wrap;
+  gap: 8.5px;
+  user-select: none;
+}
+.info{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  background-image: linear-gradient(to right ,hsl(264, 100%, 61%) ,hsl(293, 100%, 63%));
+  border-radius: 17.5px 17.5px 7.5px 7.5px;
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 2px;
+  color: white;
+}
+.arrow{
+  height: 8px;
+  width: 8px;
+  border:2px solid;
+  transform: rotate(-45deg);
+  border-color: white transparent transparent white;
+  margin-left:15px ;
+}
+.info2{
+  margin-left: 5px;
+}
+.info2 span:first-of-type{
+  font-size: 12px;
+  font-weight: 500;
+}
+.info2 span:last-of-type{
+  font-size: 8px;
+  display: block;
+  opacity: .5;
+}
+.info img{
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: .8px solid white;
+}
+.info::after{
+  content: "";
+  background-color: white;
+  width: 50%;
+  height: 30%;
+  position: absolute;
+  top: 0;
+  left:25%;
+  border-radius: 0 0 12.5px 12.5px;
+}
+.chat1  ,.chat2 ,.chat6{
+  width: 70%;
+  font-size: 9.5px;
+  border-radius:7.5px;
+  margin-left: 5px;
+  color: rgb(152, 113, 174);
+  padding: 7.5px;
+  background-color: rgb(237 228 245);
+}
+.chat3 img{
+  width: 45px;
+  height: 45px;
+  border-radius:7.5px ;
+}
+.chat3 ,.chat4 , .chat5{
+  align-self: flex-end;
+  margin-right: 5px;
+}
+.chat4 ,.chat5{
+  background-color: white;
+  font-size: 9.5px;
+  padding: 7.5px;
+  border-radius: 7.5px;
+}
+.price1 ,.price2{
+  display: flex;
+  width: 82.5%;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 10px;
+  background-image:linear-gradient(to left ,hsl(264, 100%, 61%) ,hsl(293, 100%, 63%)) ;
+  height: 41.5px;
+  font-size: 10px;
+  margin-left:5px ;
+  color: white;
+  flex-flow: wrap column;
+}
+.price1 :last-child , .price2 :last-child{
+  font-weight: 700;
+  font-size: 16px;
+  align-self: flex-end;
+}
+.price1::before ,.price2::before{
+  content: "";
+  width: 17px;
+  height: 17px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.chatbox{
+  justify-self: flex-end;
+  border-radius: 15px;
+  margin-top: 5px;
+  width: 95%;
+  background-color: white;
+  padding: 8px;
+  font-size: 9px;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  color: lightgray;
+  display: flex;
+}
+.chatbox div{
+  content: "";
+  background-color: rgb(58 34 82);
+  border-radius:50% ;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+.chatbox div::before{
+  content: "";
+  width: 3px;
+  height: 3px;
+  border: 2.5px solid white;
+  border-color: white white transparent transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70% , -50%) rotate(45deg);
+}
+@media (max-width:940px){
+  body::after{
+    top: -15%;
+    left: -24%;
+  }
+  main{
+    width: 80%;
+    justify-content: space-around;
+  }
+}
+@media (max-width:685px){
+  body::after{
+    top: -25%;
+    left: -50%;
+  }
+  main{
+    top: 50px;
+    transform: translate(-50% , 0%);
+    padding-bottom: 40px;
+    width: 100%;
+    height: 100vh;
+  }
+  .app{
+    margin-bottom: 50px;
+  }
+}
+@media (max-width:460px) {
+  body::after{
+    left: -80%;
+  }
+  .main{
+    width: 260px;
+  }
+}
+@media (max-width:325px) {
+  body::after{
+    left: -95%;
+    top: -20%;
+  }
+}
